@@ -1,0 +1,27 @@
+[versions]
+kotlin = "2.0.20"
+kotest = "5.9.1"
+mockk = "1.13.12"
+slf4j = "2.0.16"
+spotless = "6.25.0"
+hoplite = "2.8.2"
+
+
+[libraries]
+hopliteCore = { module = "com.sksamuel.hoplite:hoplite-core", version.ref = "hoplite" }
+hopliteHocon = { module = "com.sksamuel.hoplite:hoplite-hocon", version.ref = "hoplite" }
+kotestAssertionsCore = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotestFramework = { module = "io.kotest:kotest-framework-api-jvm", version.ref = "kotest" }
+kotestJunit5= { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotestRunnerJvm = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
+kotestProperty = { module = "io.kotest:kotest-property-jvm", version.ref = "kotest" }
+kotestAssertionsJson = { module = "io.kotest:kotest-assertions-json", version.ref = "kotest" }
+kotestExtensions = { module = "io.kotest:kotest-extensions", version.ref = "kotest" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+
+[bundles]
+kotest = ["kotestRunnerJvm", "kotestFramework", "kotestAssertionsCore", "kotestProperty", "kotestAssertionsJson", "kotestExtensions", "mockk"]
+
+[plugins]
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+
